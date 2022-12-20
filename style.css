@@ -1,0 +1,99 @@
+body {
+  background-color: rgb(169, 230, 166);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/*
+#chart {
+  background-color: white;
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+#axis-x, #axis-y {
+  background-color: black;
+  position: absolute;
+  left: 5%;
+}
+#axis-x {
+  width: 90%;
+  height: 3px;
+  bottom: 15%;
+}
+#axis-y {
+  height: 90%;
+  width: 3px;
+  bottom: 5%;
+}
+#axis-x-labels, #axis-y-labels {
+  font-size: 16px;
+}
+#axis-x-labels {
+  width: 85%;
+  height: 10%;
+  position: absolute;
+  left: calc(5% + 3px);
+  bottom: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.axis-x-label {
+  color: black;
+  width: 5%;
+  height: 40%;
+}
+#axis-y-labels {
+  width: 5%;
+  height: 75%;
+  position: absolute;
+  left: 0;
+  bottom: calc(15% + 3px);
+}
+#axis-y-labels::before {
+  content: '#';
+  position: absolute;
+  top: -5%;
+  right: 20%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#chart-face {
+  position: absolute;
+  bottom: calc(15% + 3px);
+  left: calc(5% + 3px);
+  width: 85%;
+  height: 75%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.chart-bar {
+  background-color: dodgerblue;
+  width: 5%;
+  z-index: 100;
+}
+.chart-bar-label {
+  margin-top: -21px;
+  font-size: 17px;
+  z-index: 99;
+  font-weight: bold;
+}
+.h-line {
+  height: 1px;
+  background-color: lightgray;
+  position: absolute;
+  width: 100%;
+}
+*/
