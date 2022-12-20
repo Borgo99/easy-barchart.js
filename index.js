@@ -48,13 +48,14 @@ const data4 = {
 }
 
 class Barchart {
-  constructor(chart_id, data, height=null, width=null, 
+  constructor(chart_id, data, height=null, width=null, axis_x_title='',
     bg_color='white', axis_color='black', label_color='black',
     bar_color='dodgerblue', grid_color='lightgray') {
     this.chart_id = chart_id;
     this.data = data;
     this.height = height;
     this.width = width;
+    this.axis_x_title = axis_x_title;
     this.bg_color = bg_color;
     this.axis_color = axis_color;
     this.label_color = label_color;
@@ -100,6 +101,16 @@ class Barchart {
       justify-content: space-around;
       align-items: flex-end;
     }
+    #axis-x-title {
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0;
+      color:${this.axis_color};
+    }
     .axis-x-label {
       width: 5%;
       height: 40%;
@@ -142,6 +153,7 @@ class Barchart {
       font-weight: bold;
       color:${this.label_color};
       background-color:${this.bg_color};
+      text-align: center;
     }
     .h-line {
       height: 1px;
@@ -172,8 +184,11 @@ class Barchart {
     if (this.height) chart.style.height = `${this.height}`;
     if (this.width) chart.style.width = `${this.width}`;
     const markup = `
-    <span id="${this.chart_id}-axis-x"></span>
-    <div id="${this.chart_id}-axis-x-labels"></div>
+    <span id="${this.chart_id}-axis-x">     
+    </span>
+    <div id="${this.chart_id}-axis-x-labels">
+      <p id="${this.chart_id}-axis-x-title">${this.axis_x_title}</p>
+    </div>
     <span id="${this.chart_id}-axis-y"></span>
     <div id="${this.chart_id}-axis-y-labels"></div>
     <div id="${this.chart_id}-chart-face"></div>
@@ -216,13 +231,14 @@ const barchart = new Barchart(
 barchart.build();
 
 const barchart2 = new Barchart(
-  'chartid2', data2, height='400px', width='700px',
+  'chartid2', data2, height='400px', width='700px', axis_x_title='Animals',
   bg_color='black', axis_color='white', label_color='white'
 );
 barchart2.build();
 
 const barchart3 = new Barchart(
-  'chartid3', data3, height='400px', width='550px', bg_color='#ffeecc' 
+  'chartid3', data3, height='400px', width='550px', axis_x_title='Disagree', 
+  bg_color='#ffeecc' 
 );
 barchart3.build();
 
