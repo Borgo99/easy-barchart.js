@@ -99,11 +99,11 @@ class Barchart {
       bottom: 5%;
       display: flex;
       justify-content: space-around;
-      align-items: flex-end;
+      text-align: center;
     }
     #axis-x-title {
       position: absolute;
-      bottom: -12px;
+      bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
       font-weight: bold;
@@ -114,6 +114,7 @@ class Barchart {
     .axis-x-label {
       width: 5%;
       height: 40%;
+      margin-top: 3px;
     }
     #axis-y-labels {
       width: 5%;
